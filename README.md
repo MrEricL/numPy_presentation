@@ -2,13 +2,14 @@
 
 You can use the [editor on GitHub](https://github.com/MrEricL/numPy_presentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-numPy is often used in scientific and math-intensive projects. 
+[numPy](http://www.numpy.org) is a package for Python often used in scientific and mathematical projects. It's is useful for computation-intesensive projects. 
 
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
+import np 
 Syntax highlighted code block
 
 # Header 1

@@ -18,6 +18,37 @@ python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy
 ```
 These other packages covers other functinalities required for mathematical and scientific usage such as graphing. 
 
+
+To start using it in python, make sure to import it by including ``` import numpy as np```.
+
+### Overview
+
+The main object in numPy is called a multi dimensional array. Many people will think this means that a multi dimensional array is the same thing as a matrix, but the two are distinct. A matrix is a *subclass* of the multi dimensional array since it's only 2D.
+
+For this site, we will refer to multi dimensional array as just arrays. 
+
+Let's use this sample array:
+``` 
+> a = np.array([1.5,2,3,4])
+> a
+array([1.5,2,3,4])
+```
+**Remember**
+- Use brackets! Know the syntax otherwise run into an error.
+```np.array([1,2])```
+NOT
+```np.array(1,2)```
+
+- All elements in array is the same type
+``` 
+> a.dtype
+dtype('float64')
+```
+The float forces the every number to be considered as a float. 
+
+
+### Basic functions
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

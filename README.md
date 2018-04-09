@@ -1,4 +1,4 @@
-## Background to numPy
+## Background
 
 You can use the [editor on GitHub](https://github.com/MrEricL/numPy_presentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
@@ -11,10 +11,12 @@ To install with pip enter into your terminal:
 ```
 python -m pip install --user numpy
 ```
-numPy works with a host of other packages, for a full list try:
+
+numPy works with a host of other packages. For a full list, try:
 ```
 python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 ```
+These other packages covers other functinalities required for mathematical and scientific usage such as graphing. 
 
 ### Markdown
 
@@ -48,6 +50,8 @@ import numpy as np
 
 ```
 
-### Support or Contact
+### Credits
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This website would not have been possible without the [NumPy User Guide](https://docs.scipy.org/doc/numpy-dev/user/). Everything on this website is covered more in depth in the documentation.
+
+

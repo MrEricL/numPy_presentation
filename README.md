@@ -29,22 +29,22 @@ For this site, we will refer to multi dimensional array as just arrays.
 
 Let's use this sample array:
 ``` 
-> a = np.array([1.5,2,3,4])
+> a = np.array([1.5,2])
 > a
-array([1.5,2,3,4])
+array([1.5,2])
 ```
 **Remember**
 - Use brackets! Know the syntax otherwise run into an error.
-```np.array([1,2])```
+```np.array([1.5,2])```
 NOT
-```np.array(1,2)```
+```np.array(1.5,2)```
 
 - All elements in array is the same type
 ``` 
 > a.dtype
 dtype('float64')
 ```
-The float forces the every number to be considered as a float. 
+The 1.5 forces the overall array type to be considered as a float. 
 
 
 ### Basic functions

@@ -149,7 +149,7 @@ array([[1],
        [3]])
 ```
 
-### Aggregate Operations
+#### Aggregate Operations
 
 Aggregate Operations produce a scalar using all the elements (eg. sum, max, min). You can specify axis (in a 2D array, this would mean row or column), and get an array.
 
@@ -173,7 +173,7 @@ array([12, 15, 18, 21])
 11
 ```
 
-### Copying
+#### Copying
 
 By default, no copying is done:
 
@@ -192,7 +192,7 @@ To make a copy of an array, you do:
 False
 ```
 
-### Slicing
+#### Slicing
 
 Each axis can be sliced to form a sub matrix by giving the start and end index of each axis (rows, columns).
 
@@ -206,7 +206,7 @@ Each axis can be sliced to form a sub matrix by giving the start and end index o
 [[2],[5],[8]]
 ```
 
-### Iterating
+#### Iterating
 
 Iterating over multidimensional arrays is done with respect to the first axis.
 
@@ -222,7 +222,7 @@ Can also iterate over all elements using attribute flat:
 ...     print(element)
 ```
 
-### Other
+#### Other
 
 ```
 > np.polyval([1,2,3], 4)  #1 * 4^2 + 2 * 4^1 + 3 * 4^0 = 27

@@ -1,7 +1,6 @@
+By Eric Li and Masha Zorin
+
 ## Background
-
-You can use the [editor on GitHub](https://github.com/MrEricL/numPy_presentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
 [numPy](http://www.numpy.org) is a package for Python often used in scientific and mathematical projects. It's is useful for computation-intesensive projects. numPy is flexible as it works with other programming languages such as C,C++, and Fortran.
 
 numPy was created by Travis Oliphant from an older math package called numeric, and is now mantained by a community.
@@ -29,9 +28,9 @@ For this site, we will refer to multi dimensional array as just arrays.
 
 Let's use this sample array:
 ``` 
-> a = np.array([1.5,2])
+> a = np.array([1.5,  2])
 > a
-array([1.5,2])
+array([1.5, 2])
 ```
 **Remember**
 - Use brackets! Know the syntax otherwise run into an error.
@@ -48,6 +47,42 @@ The 1.5 forces the overall array type to be considered as a float.
 
 
 ### Basic functions
+
+Here is a sample of basic functions for new users.
+
+#### Generating Basic Arrays 
+**Zero**: To generate an array of zeros, use the syntax ``` np.zeros([X,Y,Z])``` where X and Y refers to the dimensions of the array. The Y and Z can be left out and be assumed as 1.
+```
+> np.zeros([2,  3])
+array([[ 0.,  0.,  0.],
+       [ 0.,  0.,  0.]])
+```
+
+**Unit**: The same as the zero, but with 1s instead, with the syntax ``` np.ones([X,Y,Z])```.
+```
+> np.ones([2, 2,  3])
+array([[[ 1.,  1.,  1.],
+        [ 1.,  1.,  1.]],
+
+       [[ 1.,  1.,  1.],
+        [ 1.,  1.,  1.]]])
+```
+
+#### Operations
+
+``` 
+> a = np.array([1,  2,  3])
+> b = np.array([4,  5,  6])
+```
+
+#### Shaping
+
+**Random**: Same as before but with random values, based on the memory. The syntax is ``` np.empty([X,Y,Z])```.
+
+```
+> np.empty([3])
+array([ -1.72723371e-77,  -1.72723371e-77,  -1.72723371e-77])
+```
 
 ### Markdown
 
@@ -73,6 +108,10 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Usage
+
+numPy is a staple in helping math/science research. Most machine learning done in Python relies on numPy, due to the mathematical complexity.
 
 ### Sample Code
 

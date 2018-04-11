@@ -67,58 +67,92 @@ array([[[ 1.,  1.,  1.],
        [[ 1.,  1.,  1.],
         [ 1.,  1.,  1.]]])
 ```
-
-#### Operations
-
-``` 
-> a = np.array([1,  2,  3])
-> b = np.array([4,  5,  6])
-```
-
-#### Shaping
-
 **Random**: Same as before but with random values, based on the memory. The syntax is ``` np.empty([X,Y,Z])```.
 
 ```
 > np.empty([3])
 array([ -1.72723371e-77,  -1.72723371e-77,  -1.72723371e-77])
 ```
+#### Operations
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-import np 
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Let's use the following arrays as an example.
+``` 
+> a = np.array([1,  2,  3])
+> b = np.array([4,  5,  6])
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**Addition and Subtraction**: You can just add/subtract arrays, and the values at the corresponding indicies will be added/subtracted.
+
+Addition
+```
+> c = a + b
+> c
+array([5, 7, 9])
+```
+
+Subtraction
+```
+> c = a - b
+> c
+array([-3, -3, -3])
+```
+
+**Functions**: You can apply a function to an array, and each index will be applied to.
+```
+> np.sin(c)
+array([-0.95892427,  0.6569866 ,  0.41211849])
+```
+
+**Multiplication**
+Scalar: You multiply every index by some value. 
+```
+> a
+array([1, 2, 3])
+> a * 5
+array([5, 10, 15])
+```
+Multiplication by Index: This is the same as addition and subtraction where respective indicies are multiplied.
+```
+> a * b
+array([ 4, 10, 18])
+```
+Dot Product: This is when you want the dot product. Use syntax ```<array0>.dot(<array1>)```.
+```
+> a.dot(b)
+32
+> m = np.array([(1, 2),(3, 4)])
+> m = np.array([(5, 6),(7, 8)])
+> m.dot(n)
+array([[44, 55, 66],
+       [60, 75, 90]])
+```
+
+#### Shaping
+
+The arrays in numPy are very flexible, allowing changes to the structure of the array.
+
+**Ravel**: This flattens the array, using the syntax ```<array>.ravel()```.
+
+```
+> a = np.array([[1,  2,  3],[1,  2,  3]])
+> a.ravel()
+array([1, 2, 3, 1, 2, 3])
+```
+
+**Reshape**: This allows you to reshape the array, although the total size must be the same. You can not reshape an array with one element in a 1x1 structure into an array with ten elements in a 2x5. Use the syntax ```<array>.reshape()```.
+
+```
+> a = np.array([1,  2,  3])
+> a.reshape(3,1)
+array([[1],
+       [2],
+       [3]])
+```
 
 ### Usage
 
 numPy is a staple in helping math/science research. Most machine learning done in Python relies on numPy, due to the mathematical complexity.
 
-### Sample Code
-
-```python
-import numpy as np
-
-```
 
 ### Credits
 

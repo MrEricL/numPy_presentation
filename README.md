@@ -149,6 +149,90 @@ array([[1],
        [3]])
 ```
 
+### Aggregate Operations
+
+Aggregate Operations produce a scalar using all the elements (eg. sum, max, min). You can specify axis (in a 2D array, this would mean row or column), and get an array.
+
+**Sum**: Finds the sum of all the elements in the array.
+
+```
+> a  =  array([[ 0,  1,  2,  3],   [ 4,  5,  6,  7],  [ 8,  9, 10, 11]])
+> a.sum()
+66
+> a.sum(axis=0)   # sum of each column
+array([12, 15, 18, 21])
+```
+
+**Max/Min**: Finds the maximum (or minimum) value in the array.
+
+```
+> a  =  array([[ 0,  1,  2,  3],   [ 4,  5,  6,  7],  [ 8,  9, 10, 11]])
+> a.min()
+0
+> a.max()
+11
+```
+
+### Copying
+
+By default, no copying is done:
+
+```
+> a = np.arange(12)
+> b = a            # no new object is created
+> b is a
+True
+```
+
+To make a copy of an array, you do:
+
+```
+> d = a.copy()        # a new array object with new data is created
+> d is a
+False
+```
+
+### Slicing
+
+Each axis can be sliced to form a sub matrix by giving the start and end index of each axis (rows, columns).
+
+```
+> b = array([[1, 2, 3], 
+  [4, 5, 6], 
+  [7, 8, 9]]
+> b [ 0 : 3, 1 : 2]        	#rows 0 (inclusive) to 3 (exclusive), cols 1-2
+[[2],[5],[8]]
+> b [ : , 1]        	       #gives same result as above
+[[2],[5],[8]]
+```
+
+### Iterating
+
+Iterating over multidimensional arrays is done with respect to the first axis.
+
+```
+> for row in b:
+...    print(row)
+```
+
+Can also iterate over all elements using attribute flat:
+
+```
+> for element in b.flat:
+...     print(element)
+```
+
+### Other
+
+```
+> np.polyval([1,2,3], 4)  #1 * 4^2 + 2 * 4^1 + 3 * 4^0 = 27
+27
+> n, p = 10, .5
+> s = np.random.binomial(n, p, 1)   # result of flipping coin ten times, tested 1 time
+> s
+array([7, 8, 8, 3, 5, 7, 4, 2, 5, 5])
+```
+
 ### Usage
 
 numPy is a staple in helping math/science research. Most machine learning done in Python relies on numPy, due to the mathematical complexity.
